@@ -1,11 +1,13 @@
 package com.example.basic_mobile.ui
 
 import android.content.Context
+import android.provider.ContactsContract.Data
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import com.example.basic_mobile.databinding.IncTitlebarBinding
 import com.example.basic_mobile.ext.hide
+import com.example.basic_mobile.ext.setSafeOnClickListener
 import com.example.basic_mobile.ext.show
 
 class TitleBar : FrameLayout {
@@ -32,6 +34,7 @@ class TitleBar : FrameLayout {
     }
 
     private var binding: IncTitlebarBinding? = null
+    private  var dataChangeListener: DataChangeListener? = null
 
     private fun inflateView() {
         binding = IncTitlebarBinding.inflate(LayoutInflater.from(context))
@@ -41,7 +44,10 @@ class TitleBar : FrameLayout {
     private fun initView() {
 
         //클릭이벤트
-
+        binding?.ivMenu?.setOnClickListener() {
+            if(dataChangeListener != null)
+                this.dataChangeListener?.onChanged(BUTTON_NAME_HOME_RIGHT_SIDE,"")
+        }
     }
 
     /**
@@ -63,4 +69,17 @@ class TitleBar : FrameLayout {
             binding?.ivMenu?.hide()
         }
     }
+
+    fun setOnClickBackBtnListener(listener: (Int, String) -> Unit) {
+        this.dataChangeListener = object : DataChangeListener {
+            override fun onChanged(index: Int, value: String) {
+                listener(index, value)
+            }
+        }
+    }
+
+    interface DataChangeListener {
+        fun onChanged(index: Int,  value : String);
+    }
+
 }

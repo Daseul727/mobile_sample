@@ -6,29 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.example.basic_mobile.ui.TitleBar
-        android:id="@+id/inc_titlebar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/title_height"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_recycler"
-        android:text="기본 Recycler View"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <com.example.basic_mobile.ui.TitleBar
+            android:id="@+id/inc_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height" />
 
-    <Button
-        android:id="@+id/btn_epoxy"
-        android:text="epoxy View"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_recycler"/>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.example.basic_mobile.ui.CustomDrawerMenu
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.navigation.NavigationView>
+        <Button
+            android:id="@+id/btn_recycler"
+            android:text="기본 Recycler View"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_epoxy"
+            android:text="epoxy View"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btn_recycler"/>
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
