@@ -11,7 +11,12 @@
         <item name="android:textSize">18dp</item>
     </style>
 
-    <style name="AppTheme.Splash">
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Splash">
         <item name="android:windowBackground">@drawable/splash</item>
     </style>
 

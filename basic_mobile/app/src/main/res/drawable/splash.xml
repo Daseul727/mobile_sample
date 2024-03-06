@@ -10,7 +10,7 @@
     <item android:bottom="0dp" android:right="30dp">
         <bitmap
             android:gravity="center_vertical|right"
-            android:src="@drawable/logo" />
+            android:src="@drawable/app_logo"/>
     </item>
 
 </layer-list>
