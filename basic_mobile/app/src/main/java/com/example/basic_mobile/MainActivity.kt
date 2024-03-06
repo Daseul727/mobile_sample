@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             when (i) {
                 TitleBar.BUTTON_NAME_HOME -> {}
                 TitleBar.BUTTON_NAME_BACK -> {}
-                TitleBar.BUTTON_NAME_HOME_RIGHT_SIDE -> {
+                TitleBar.BUTTON_NAME_HOME_MENU -> {
                     if (binding?.navView?.isVisible == true) {
                         binding?.navView?.hide()
                     } else {

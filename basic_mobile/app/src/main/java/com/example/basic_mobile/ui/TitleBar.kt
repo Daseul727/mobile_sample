@@ -7,15 +7,13 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import com.example.basic_mobile.databinding.IncTitlebarBinding
 import com.example.basic_mobile.ext.hide
-import com.example.basic_mobile.ext.setSafeOnClickListener
 import com.example.basic_mobile.ext.show
 
 class TitleBar : FrameLayout {
     companion object {
         const val BUTTON_NAME_BACK = 1
-        const val BUTTON_NAME_HOME_RIGHT_SIDE = 2
+        const val BUTTON_NAME_HOME_MENU = 2
         const val BUTTON_NAME_HOME = 3
-        const val BUTTON_NAME_CLOSE = 4
     }
 
     constructor(context: Context) : super(context) {
@@ -46,7 +44,7 @@ class TitleBar : FrameLayout {
         //클릭이벤트
         binding?.ivMenu?.setOnClickListener() {
             if(dataChangeListener != null)
-                this.dataChangeListener?.onChanged(BUTTON_NAME_HOME_RIGHT_SIDE,"")
+                this.dataChangeListener?.onChanged(BUTTON_NAME_HOME_MENU,"")
         }
     }
 
