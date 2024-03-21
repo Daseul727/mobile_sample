@@ -1,4 +1,4 @@
-package com.example.basic_mobile.ext
+package com.example.basic_mobile.common
 
 import android.view.View
 import com.example.basic_mobile.utils.OnOneOffClickListener

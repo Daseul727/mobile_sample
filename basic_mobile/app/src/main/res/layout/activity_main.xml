@@ -25,22 +25,33 @@
             android:visibility="gone">
 
             <com.example.basic_mobile.ui.CustomDrawerMenu
+                android:id="@+id/inc_drawer_menu_items"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
         </com.google.android.material.navigation.NavigationView>
-        <Button
-            android:id="@+id/btn_recycler"
-            android:text="기본 Recycler View"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
-        <Button
-            android:id="@+id/btn_epoxy"
-            android:text="epoxy View"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/btn_recycler"/>
+        <LinearLayout
+            android:layout_marginTop="@dimen/sp_20"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_recycler"
+                android:text="기본 Recycler View"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btn_epoxy"
+                android:text="epoxy View"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btn_recycler"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 

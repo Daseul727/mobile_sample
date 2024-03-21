@@ -1,13 +1,12 @@
 package com.example.basic_mobile.ui
 
 import android.content.Context
-import android.provider.ContactsContract.Data
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import com.example.basic_mobile.databinding.IncTitlebarBinding
-import com.example.basic_mobile.ext.hide
-import com.example.basic_mobile.ext.show
+import com.example.basic_mobile.common.hide
+import com.example.basic_mobile.common.show
 
 class TitleBar : FrameLayout {
     companion object {

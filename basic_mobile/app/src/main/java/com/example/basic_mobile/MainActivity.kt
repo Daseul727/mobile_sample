@@ -3,23 +3,27 @@ package com.example.basic_mobile
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.isVisible
-import androidx.drawerlayout.widget.DrawerLayout
 import com.example.basic_mobile.databinding.ActivityMainBinding
-import com.example.basic_mobile.ext.hide
-import com.example.basic_mobile.ext.show
+import com.example.basic_mobile.common.hide
+import com.example.basic_mobile.common.show
 import com.example.basic_mobile.ui.CustomDrawerMenu
 import com.example.basic_mobile.ui.TitleBar
+import com.google.android.material.navigation.NavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private var binding: ActivityMainBinding? = null
-    lateinit var drawerLayout: DrawerLayout
+    private var navigationView: NavigationView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
+        initNavigation()
         setTitleBar()
+
     }
 
     private fun setTitleBar () {
@@ -39,6 +43,23 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun initNavigation() {
+        binding?.incDrawerMenuItems?.setOnClickMenuListener {
+            when(it) {
+                CustomDrawerMenu.MenuItem.home -> {
+                    binding?.navView?.hide()
+                }
+                CustomDrawerMenu.MenuItem.recyclerView -> {
+                    binding?.navView?.hide()
+                }
+                else -> {
+                    binding?.navView?.hide()
+                }
+            }
+        }
+
     }
 
 }

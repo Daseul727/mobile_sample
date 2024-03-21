@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">basic_mobile</string>
+
+    <string name="error_internet_connetion">No Internet Connection</string>
 </resources>

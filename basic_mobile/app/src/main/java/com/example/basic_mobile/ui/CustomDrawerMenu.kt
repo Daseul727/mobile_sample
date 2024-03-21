@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import com.example.basic_mobile.databinding.DrawerMenuItemsBinding
-import com.example.basic_mobile.ext.setSafeOnClickListener
+import com.example.basic_mobile.common.setSafeOnClickListener
 
 class CustomDrawerMenu : FrameLayout {
 
