@@ -3,8 +3,10 @@ package com.example.basic_mobile
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.isVisible
+import androidx.fragment.app.commit
 import com.example.basic_mobile.databinding.ActivityMainBinding
 import com.example.basic_mobile.common.hide
+import com.example.basic_mobile.common.setSafeOnClickListener
 import com.example.basic_mobile.common.show
 import com.example.basic_mobile.ui.CustomDrawerMenu
 import com.example.basic_mobile.ui.TitleBar
@@ -24,6 +26,11 @@ class MainActivity : AppCompatActivity() {
         initNavigation()
         setTitleBar()
 
+        binding?.btnRecycler?.setSafeOnClickListener {
+            supportFragmentManager.commit {
+
+            }
+        }
     }
 
     private fun setTitleBar () {
