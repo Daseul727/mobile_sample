@@ -33,6 +33,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding true
+    }
 }
 
 dependencies {
@@ -45,8 +50,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     /* Hilt */
-    implementation "com.google.dagger:hilt-android:2.42"
-    kapt "com.google.dagger:hilt-android-compiler:2.42"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
     /* Retrofit */
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -55,4 +60,7 @@ dependencies {
 
     /*lifecycle*/
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
+
+    /*image load*/
+    implementation "io.coil-kt:coil:$coilVersion"
 }
