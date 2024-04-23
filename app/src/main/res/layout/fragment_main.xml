@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/inc_titlebar"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            layout="@layout/inc_title_bar" />
+
+        <Button
+            android:id="@+id/btn_vp_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="View Pager 2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_vp_image"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="go Third"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_vp_text" />
+
+        <Button
+            android:id="@+id/btn_vp_banner"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="go Third"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_vp_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
