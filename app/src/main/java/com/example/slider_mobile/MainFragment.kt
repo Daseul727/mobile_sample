@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.slider_mobile.banner.BannerFragment
 import com.example.slider_mobile.databinding.FragmentMainBinding
 import com.example.slider_mobile.image.ImageFragment
+import com.example.slider_mobile.text.TextFragment
 
 class MainFragment : Fragment() {
 
@@ -36,12 +37,17 @@ class MainFragment : Fragment() {
             incTitlebar.btnBack.visibility = View.GONE
             incTitlebar.txtTitle.text = "MAIN"
 
-            btnMoveSecond.setOnClickListener {
+            btnVpText.setOnClickListener {
                 val act = activity as MainActivity
-                act.openFragment(BannerFragment() , "BANNER")
+                act.openFragment(TextFragment() , "TEXT")
             }
 
-            btnMoveThird.setOnClickListener {
+            btnVpImage.setOnClickListener {
+                val act = activity as MainActivity
+                act.openFragment(ImageFragment() , "IMAGE")
+            }
+
+            btnVpBanner.setOnClickListener {
                 val act = activity as MainActivity
                 act.openFragment(BannerFragment() , "BANNER")
             }
