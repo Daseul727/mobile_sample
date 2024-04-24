@@ -5,23 +5,22 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/design_default_color_primary_dark">
+        android:background="@color/white">
 
         <include
             android:id="@+id/inc_titlebar2"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/toolbar_height"
             android:layout_width="match_parent"
             layout="@layout/inc_title_bar" />
 
-        <Button
-            android:id="@+id/btn_home"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="go home"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_normal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/banner_height"
+            android:layout_marginTop="70dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

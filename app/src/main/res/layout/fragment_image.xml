@@ -13,7 +13,7 @@
 
         <include
             android:id="@+id/inc_titlebar"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/toolbar_height"
             android:layout_width="match_parent"
             layout="@layout/inc_title_bar" />
 

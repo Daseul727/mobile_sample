@@ -33,12 +33,10 @@ class BannerFragment : Fragment() {
                 act.navigateUp("BANNER")
             }
 
-            btnHome.setOnClickListener {
-                val act = activity as MainActivity
-                act.clearBackStack()
-            }
-
             incTitlebar2.txtTitle.text = "Third"
+
+            viewPagerNormal.adapter = context?.let { BannerViewPagerAdapter(it) }
+
         }
     }
 }
