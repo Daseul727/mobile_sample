@@ -18,29 +18,29 @@
             android:id="@+id/btn_vp_text"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="View Pager 2"
+            android:text="Text View Pager 2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btn_vp_image"
+            android:id="@+id/btn_vp_banner"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="go Third"
+            android:text="Banner View Pager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_vp_text" />
 
         <Button
-            android:id="@+id/btn_vp_banner"
+            android:id="@+id/btn_vp_multi"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Banner View Pager 2"
+            android:text="multiple view pager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_vp_image" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_vp_banner" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

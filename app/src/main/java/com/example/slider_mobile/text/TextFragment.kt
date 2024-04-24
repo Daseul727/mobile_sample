@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.slider_mobile.MainActivity
 import com.example.slider_mobile.R
 import com.example.slider_mobile.databinding.FragmentTextBinding
-import com.example.slider_mobile.image.ImageFragment
+import com.example.slider_mobile.multi.MultiItemFragment
 
 class TextFragment : Fragment() {
 
@@ -24,8 +24,8 @@ class TextFragment : Fragment() {
         val TAG = TextFragment::class.java.simpleName
         var bannerPosition = 0
 
-        fun newInstance(): ImageFragment {
-            val fragment = ImageFragment()
+        fun newInstance(): MultiItemFragment {
+            val fragment = MultiItemFragment()
             val args = Bundle()
             fragment.arguments = args
             return fragment

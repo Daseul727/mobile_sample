@@ -1,4 +1,4 @@
-package com.example.slider_mobile.image
+package com.example.slider_mobile.multi
 
 import android.os.Bundle
 import android.util.Log
@@ -9,19 +9,19 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.slider_mobile.MainActivity
 import com.example.slider_mobile.R
-import com.example.slider_mobile.databinding.FragmentImageBinding
+import com.example.slider_mobile.databinding.FragmentMultiItemBinding
 
-class ImageFragment : Fragment() {
+class MultiItemFragment : Fragment() {
 
-    private var _binding : FragmentImageBinding? = null
-    private val binding: FragmentImageBinding
+    private var _binding : FragmentMultiItemBinding? = null
+    private val binding: FragmentMultiItemBinding
         get() = _binding!!
 
     var strParam = ""
 
     companion object {
-        fun newInstance() : ImageFragment {
-            val fragment = ImageFragment()
+        fun newInstance() : MultiItemFragment {
+            val fragment = MultiItemFragment()
             val args = Bundle()
             fragment.arguments = args
             return fragment
@@ -41,7 +41,7 @@ class ImageFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_image,container,false)
+        _binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_multi_item,container,false)
         return binding.root
     }
 
@@ -53,11 +53,10 @@ class ImageFragment : Fragment() {
 
             //tvMessage.text = strParam
 
-            incTitlebar.txtTitle.text = "Second"
+            incTitlebar.txtTitle.text = "Multi"
             incTitlebar.btnBack.setOnClickListener {
                 val act = activity as MainActivity
-                act.navigateUp("DOG")
-
+                act.navigateUp("MULTI")
             }
 
         }

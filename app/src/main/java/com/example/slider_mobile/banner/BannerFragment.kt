@@ -33,7 +33,7 @@ class BannerFragment : Fragment() {
                 act.navigateUp("BANNER")
             }
 
-            incTitlebar2.txtTitle.text = "Third"
+            incTitlebar2.txtTitle.text = "Banner"
 
             viewPagerNormal.adapter = context?.let { BannerViewPagerAdapter(it) }
 
