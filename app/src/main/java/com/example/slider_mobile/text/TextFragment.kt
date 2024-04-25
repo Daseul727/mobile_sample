@@ -69,6 +69,8 @@ class TextFragment : Fragment() {
         bannerPosition = (Int.MAX_VALUE / 2) - ((Int.MAX_VALUE / 2) % list.size)
         binding.vpText.setCurrentItem(bannerPosition, false)
         binding.vpText.adapter = TextViewPagerAdapter(list)
+
+        binding.vpTextBox.adapter = TextBoxViewPagerAdapter(list)
     }
     
     private fun initTitleBar() {
